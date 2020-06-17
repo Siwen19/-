@@ -4,67 +4,14 @@ import './index.css';
 import App from './App';
 import Notification from './Notification';
 import * as serviceWorker from './serviceWorker';
-import ClickDog from './ClickDog';
-import Computer from './Computer';
-import LessonsList from './LessonsList';
-  
-class Man extends Component {
-  state = {  }
-  render() { 
-    return ( 
-      <div className='man'>
-        Man
-      </div>
-     );
-  }
-}
-  
-class Dog extends Component {
-  state = {  }
-  render() { 
-    return ( 
-      <div className='dog'>
-        Dog
-      </div>
-     );
-  }
-} 
-
-class Room extends Component {
-  state = {  }
-  render() { 
-    return ( 
-      <div className='room'>
-        <Man />
-        <Dog />
-        <Dog />
-      </div>
-     );
-  }
-} 
-
-class Bathroom extends Component {
-  state = {  }
-  render() { 
-    return ( 
-      <div className='bathroom'>
-        Bathroom
-      </div>
-     );
-  }
-} 
-
-class House extends Component {
-  state = {  }
-  render() { 
-    return ( 
-      <div className='house'>
-        <Room />
-        <Bathroom />
-      </div>
-     );
-  }
-} 
+import ClickDog from './Dog/ClickDog';
+import Computer from './Computer/Computer';
+import LessonsList from './Lesson/LessonsList';
+import PercentageApp from './Percentage/percentageApp';
+import House from './House/house';
+import Post from './Post/post2'
+import BlackBorderContainer from './BlackBorderContainer/blackBorderContainer';
+import DefaultStylePost from './defaultStyle/defaultStylePost';
 
 const lessons = [
   { title: 'Lesson 1: title', description: 'Lesson 1: description' },
@@ -73,14 +20,21 @@ const lessons = [
   { title: 'Lesson 4: title', description: 'Lesson 4: description' }
 ]
 
-ReactDOM.render( 
+ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    {/* <Notification /> */}
-    {/* <House /> */}
-    {/* <ClickDog /> */}
+    {/* <PercentageApp /> */}
+    {/* <LessonsList lessons={lessons}/> */}
     {/* <Computer /> */}
-    <LessonsList lessons={lessons} />
+    {/* <ClickDog /> */}
+    {/* <House /> */}
+    {/* <Post /> */}
+    {/* <BlackBorderContainer>
+      <div className='name'>My Name: Lucy</div>
+      <p className='age'>My Age: <span>12</span></p>
+    </BlackBorderContainer> */}
+    <DefaultStylePost />
+    <DefaultStylePost style={{ color: 'blue', fontSize: '13px' }} />
+    <DefaultStylePost style={{ fontSize: '12px' }} />
   </React.StrictMode>,
   document.getElementById('root')
 );
